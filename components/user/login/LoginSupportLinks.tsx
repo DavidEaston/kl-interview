@@ -1,6 +1,7 @@
 import Link from "../../common/link/Link";
 import Dropdown from "../../common/dropdown/Dropdown";
 import DropdownButton from "../../common/dropdown/DropdownButton";
+import ThemeToggle from "../../common/themeToggle/ThemeToggle";
 
 export type SupportLink = {
   name: string;
@@ -30,7 +31,7 @@ const LoginSupportLinks = ({ supportLinks = [] }: LoginSupportLinksProps) => {
   return (
     <div className="flex justify-between">
       <div className="flex md:space-x-4">
-        <p>o</p>
+        <ThemeToggle />
         <Dropdown id="language-dropdown" title="Select Language">
           <DropdownButton active={true}>English</DropdownButton>
           <DropdownButton>Spanish</DropdownButton>
