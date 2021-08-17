@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import BaseLayout from "../layouts/BaseLayout";
-import LoginPanel from "../components/user/login/LoginPanel";
+import BaseLayout from "@layouts/BaseLayout";
+import { LoginPanel } from "@components/user/login";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <LoginPanel message="boop" />
+      <LoginPanel />
     </BaseLayout>
   );
 };

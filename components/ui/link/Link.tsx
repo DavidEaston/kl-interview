@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from "react";
 import cn from "classnames";
 
-type Size = "larger" | "large" | "regular" | "small";
+type Size = "larger" | "large" | "regular" | "small" | "xsmall";
 type LinkVariant = "primary" | "secondary";
 
 export interface LinkProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -26,11 +26,14 @@ const Link = (props: LinkProps) => {
     large: "text-lg",
     regular: "text-base",
     small: "text-sm",
+    xsmall: "text-xs",
   };
 
   const VARIANT_MAPS: Record<LinkVariant, string> = {
-    primary: "text-indigo-600 hover:text-indigo-500",
-    secondary: "text-gray-500 hover:text-gray-900",
+    primary:
+      "text-navyBlue dark:text-blue-300 dark:hover:text-blue-200 hover:text-indigo-800 hover:underline",
+    secondary:
+      "text-black dark:text-gray-400 hover:text-gray-900 hover:underline",
   };
 
   const linkBase = "font-medium";

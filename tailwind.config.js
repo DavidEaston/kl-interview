@@ -9,6 +9,18 @@ module.exports = {
       boxShadow: {
         kl: "0 0 20px 5px rgba(0, 0, 0, 0.1)",
       },
+      colors: {
+        blue: {
+          light: "#7daeff",
+          DEFAULT: "blue",
+          dark: "#020209",
+        },
+        navyBlue: {
+          light: "#66a0ff",
+          DEFAULT: "navy",
+          dark: "#020209",
+        },
+      },
     },
   },
   variants: {

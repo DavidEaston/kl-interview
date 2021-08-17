@@ -1,5 +1,5 @@
-import Footer from "../components/shared/footer/Footer";
-import Navbar from "../components/shared/navbar/Navbar";
+import { Footer } from "@components/shared/footer";
+import { Navbar } from "@components/shared/navbar";
 
 // Declaring type of props - see "Typing Component Props" for more examples
 type BaseLayoutProps = {
@@ -10,8 +10,8 @@ type BaseLayoutProps = {
 const BaseLayoutProps = ({ center = false, children }: BaseLayoutProps) => {
   return (
     <>
-      <Navbar />
-      <main className="flex flex-col h-screen bg-gray-100">
+      {/* <Navbar /> */}
+      <main className="flex flex-col h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
         <div className="flex flex-col justify-center items-center align-middle h-screen w-screen container mx-auto">
           {children}
         </div>

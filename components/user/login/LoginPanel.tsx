@@ -1,13 +1,9 @@
-import Logo from "../../shared/Logo";
 import LoginForm from "./LoginForm";
-import Link from "../../common/link/Link";
 import LoginSupportLinks, { SupportLink } from "./LoginSupportLinks";
+import { Logo } from "@components/shared/logo";
+import { Link } from "@components/ui/link";
 
-type LoginPanelProps = {
-  message: string;
-};
-
-const LoginPanel = ({ message }: LoginPanelProps) => {
+const LoginPanel = () => {
   const supportLinks: SupportLink[] = [
     { name: "Help", title: "Help", url: "/" },
     { name: "Privacy", title: "Privacy", url: "/" },
@@ -16,21 +12,25 @@ const LoginPanel = ({ message }: LoginPanelProps) => {
 
   return (
     <article className="w-full max-w-sm">
-      <section className="bg-white px-8 pt-6 pb-8 shadow-kl rounded-kl">
+      <section className="bg-white dark:bg-gray-800 transition-colors px-4 sm:pl-8 sm:pr-7 pt-8 pb-9 shadow-kl rounded-kl">
         <header>
-          <div className="pb-8">
+          <div className="pb-10">
             <Logo />
           </div>
-          <h2 className="text-2xl font-semibold">Sign In</h2>
+          <h2 className="text-2xl font-semibold dark:text-white transition-colors">
+            Sign In
+          </h2>
         </header>
-        <div className="py-6">
+        <div className="pt-8 pb-9">
           <LoginForm />
         </div>
-        <footer>
-          <Link href="/">Create an account</Link>
+        <footer className="text-center sm:text-left">
+          <Link href="/" size="small">
+            Create an account
+          </Link>
         </footer>
       </section>
-      <section className="pt-4">
+      <section className="pt-3">
         <LoginSupportLinks supportLinks={supportLinks} />
       </section>
     </article>
